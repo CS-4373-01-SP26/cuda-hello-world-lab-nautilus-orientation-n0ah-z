@@ -18,10 +18,10 @@ NVCCFLAGS := -arch=$(ARCH) -O2
 all: check_arch cuda_hello
 
 check_arch:
-	@echo "==> Building with GPU arch: $(ARCH)"
+        @echo "==> Building with GPU arch: $(ARCH)"
 
 cuda_hello: cuda_hello.cu
-	$(NVCC) $(NVCCFLAGS) -o cuda_hello cuda_hello.cu
+        $(NVCC) $(NVCCFLAGS) -o cuda_hello cuda_hello.cu
 
 clean:
-	rm -f cuda_hello
+        rm -f cuda_hello
